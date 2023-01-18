@@ -22,7 +22,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "server:start": "http-server ./build --port 3000",
-    "test": "concurrently \"npm run server:start\" \"npm run cypress:run\" -k --kill-others-on-fail",
+    "test": "concurrently -k -s last \"npm run server:start\" \"npm run cypress:run\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
