@@ -22,7 +22,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "server:start": "http-server ./build --port 3000",
-    "test": "node ./bootstrap.js",
+    "test": "concurrently -k -s first \"cypress run\" \"http-server ./build --port 3000\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
