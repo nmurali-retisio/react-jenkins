@@ -21,6 +21,8 @@
     "build": "react-scripts build",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "server:start": "http-server ./build --port 3000",
+    "test": "concurrently \"npm run server:start\" \"npm run cypress:run\" -k --kill-others-on-fail",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +44,8 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "concurrently": "^7.6.0",
+    "cypress": "^12.3.0",
+    "http-server": "^14.1.1"
   }
 }

@@ -6,9 +6,14 @@ pipeline {
                 bat "npm install"
             }
         }
+        stage('build') {
+            steps {
+                bat "npm run build"
+            }
+        }
          stage('test') {
             steps {
-                bat "npm run cypress:run"
+                bat "npm test"
             }
         }
         stage('deploy') {
