@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent { label 'master' }
+
+    tools { nodejs "nodejs" }
+
 
     stages {
         stage('install') {
