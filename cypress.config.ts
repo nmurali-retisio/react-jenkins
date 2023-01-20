@@ -6,5 +6,10 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  video: false
+  video: false,
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/my-test-output.xml',
+    toConsole: true,
+  },
 });
