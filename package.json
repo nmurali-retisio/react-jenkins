@@ -10,6 +10,8 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
+    "axios": "^1.2.3",
+    "mongoose": "^6.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -20,9 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "server:start": "http-server ./build --port 3000",
-    "test": "concurrently -k -s first \"cypress run\" \"http-server ./build --port 3000\"",
+    "test": "concurrently -k -s last \"http-server ./build --port 3000\" \"cypress run\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
